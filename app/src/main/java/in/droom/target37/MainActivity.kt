@@ -1,6 +1,5 @@
 package `in`.droom.target37
 
-import android.graphics.pdf.PdfDocument
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -8,11 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.Core
-import java.io.File
-import java.io.FileOutputStream
-import android.graphics.BitmapFactory
+
 
 class MainActivity : AppCompatActivity() {
+    private val TAG="MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         val resSum=twoSum(arr,13)
         println("Res Sum: ${resSum.joinToString()}")
 
+        /**
+         * Hy-Order Fun
+         */
+
+        val multi:(Int,Int)->Int={a,b-> a*b }
+        val multi2={a:Int,b:Int->a*b}
     }
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map=mutableMapOf<Int,Int>()
